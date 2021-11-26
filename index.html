@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://kit.fontawesome.com/6a1e6c7ea7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>FITHNITI - Home</title>
+</head>
+<body>
+
+    <div class="hero">    
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
+            </div>
+            <div class="nav-links">
+                <div class="hamtoggle">
+                    <button id="hamburgerbtn">&#9776;</button>
+                </div>
+                <div class="hamiteams">
+                    <a class="e">&#10006;</a>
+                    <a href="#" class="linked1">Home</a>
+                    <a href="#aboutus" class="linked2">à propos de nous</a>
+                    <a href="#contactus" class="linked3">Nous contacter</a>
+                    <a href="./signup.html" class="btnride linked4">Trouver où Ajouter un trip</a>
+                </div>
+                
+            </div>
+        </nav>
+        <div class="main">
+            <div class="main-text">
+                <h1 class="animate__animated animate__fadeInLeft animate__slower">Monter. <br>Baissez la fenêtre. <br>Reprenons la route.</h1>
+                <p class="animate__animated animate__fadeInLeft animate__slower animate__delay-1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, qui saepe. Expedita doloremque vero amet, quaerat mollitia cum quas qui tenetur quo quos, magni, assumenda iusto id non nisi. Expedita!</p>
+                <a href="./signup.html" class="btnjoin animate__animated animate__fadeInLeft animate__slower animate__delay-2s" >Trouver où Ajouter un trip!</a>
+            </div>
+            <div class="main-sociallinks animate__animated animate__bounceInLeft animate__delay-4s">
+                <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#insta"><i class="fab fa-instagram"></i></a>
+                <a href="#twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="aboutUS" id="aboutus" >
+        <h1 data-aos="fade-up" data-aos-duration="1000">à propos de nous</h1>
+        <p data-aos="fade-up" data-aos-delay="100"  data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum suscipit dolores quis cum ipsa nemo a esse ab placeat exercitationem, eligendi ad maiores necessitatibus iusto iure pariatur vitae sequi ullam?</p>
+        <div class="btnmore">
+            <a href="#" class="btnmore" >savoir plus</a>
+        </div> 
+    </div>
+
+
+    <div class="contactUS" id="contactus">
+        <h1 data-aos="zoom-in" data-aos-duration="2000">Nous Contacter</h1>
+        <div class="formbox" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300">
+            <form action="#" class="contactform">
+                <input type="text" placeholder="Nom & Prénom" required>
+                <input type="text" placeholder="Email" required>
+                <input type="text" placeholder="Numéro télèphone" required>
+                <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+                <button type="submit" class="btnsubmit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="site-links">
+            <h2>SITE LINKS</h2>
+            <div class="links">
+                <div class="links-box">
+                    <a href="./index.html">Home</a>
+                    <a href="#aboutus">à propos de nous</a>
+                    <a href="#contactus">Nous contacter</a>
+                    <a href="#">Trouver où ajouter un trip</a>
+                </div>
+                <div class="links-box">
+                    <a href="#">Terms of service</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">privacy policy</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="sponsors">
+            <h2>No Sponsors Yet</h2>
+        </div>
+        <div class="foot">
+            <div class="social-links">
+                <h2>follow us on</h2>
+                <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#insta"><i class="fab fa-instagram"></i></a>
+                <a href="#twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>Copyright &copy; 2021 LouayBeltifa. All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="./scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

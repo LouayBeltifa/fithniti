@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/platforme.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=ApKHNzqXR2cwhmm-StLfPPGWui3cn-0r4T2jldabfLLpWh7PTvj6b_8nCepNPJ57' async defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
+        </div>
+        <div class="nav-links">
+            <div class="hamtoggle">
+                <button id="hamburgerbtn">&#9776;</button>
+            </div>
+            <div class="hamiteams">
+                <a class="e">&#10006;</a>
+                <a href="#searchtrip" class="linked1">Rechercher un trajet</a>
+                <a href="#addtrip" class="linked2">Publier un trajet</a>
+                <a href="#contactus" class="linked3">Profile</a>
+                <a href="./signup.html"></a>
+            </div>
+            
+        </div>
+    </nav>
+    <div class="userheader">
+        <h1>Salut,</h1>
+        <div id="username"></div>
+        <div id="userimg"></div>
+        <button id="signoutbtn">Signout</button>
+    </div>
+
+    <div class="searchtrip" id="searchtrip">
+            <h1>Où voulez-vous aller ?</h1>
+        <div class="inputsbox">
+            <div>
+                <input type="text" placeholder="D'où partez-vous?" id="frombox">
+                <div class="from">
+                    
+                </div>
+            </div>
+            <div>
+                <input type="text" placeholder="Quelle est votre destination?" id="tobox">
+                <div class="togo">
+                    
+                </div>  
+            </div>
+            <input type="date" id="datebox">
+            <button id="searchbtn">Rechercher</button>
+        </div>
+    </div>
+
+    <div class="tripcartes">
+        
+    </div>
+
+    <div class="addtrip" id="addtrip">
+        <h1>Publier un trajet</h1>
+        <div class="bigcart">   
+            <div>
+                <div class="inputform">
+                    <input type="text" placeholder="Départ" id="from">
+                    <input type="text" placeholder="Destination" id="to">
+                    <input type="date" id="date">
+                    <input type="number" placeholder="nombre des passagers" min="1" max="4" id="numP">
+                    <div class="price">
+                        <h3>prix par passager :</h3>
+                        <input type="number" id="price">
+                        <p>TND</p>
+                    </div>
+                    <textarea name="details" id="message" placeholder="Détails du voyage. 
+Exemple : Je vais rendre visite à ma famille à Tunis, je partirai de Bab Alioua, Tunis à 10h. Il y a de la place pour une petité valise par personne."></textarea>
+                    <select name="" id="bagsize">
+                        <option value="">Taille des bagages</option>
+                        <option value="Grands">Grands</option>
+                        <option value="Moyens">Moyens</option>
+                        <option value="Petits">Petits</option>
+                    </select>
+                    <select name="" id="TimeFlex">
+                        <option value="">Flexibilité sur le départ</option>
+                        <option value="">pile à l'heure</option>
+                        <option value="15">à +/- 15 minutes</option>
+                        <option value="30">à +/- 30 minutes</option>
+                        <option value="40">à +/- 40 minutes</option>
+                    </select>
+                    <button id="addTrip">Ajouter Mon Trajet</button>
+                </div>
+            </div>
+
+
+            <div class="map" id="myMap">
+            
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        function GetMap()
+        {
+            var map = new Microsoft.Maps.Map('#myMap');
+            document.getElementById("to").addEventListener("focusout", (e) =>{
+                e.preventDefault();
+                Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
+                        const from = document.getElementById("from");
+                        const to = document.getElementById("to");
+                        var directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+                        // Set Route Mode to driving
+                        directionsManager.setRequestOptions({ routeMode: Microsoft.Maps.Directions.RouteMode.driving });
+                        var waypoint1 = new Microsoft.Maps.Directions.Waypoint({ address: from.value});
+                        var waypoint2 = new Microsoft.Maps.Directions.Waypoint({ address: to.value});
+                        directionsManager.addWaypoint(waypoint1);
+                        directionsManager.addWaypoint(waypoint2);
+                        // Set the element in which the itinerary will be rendered
+                        directionsManager.setRenderOptions({ itineraryContainer: document.getElementById('printoutPanel') });
+                        directionsManager.calculateDirections();
+                });                                     
+            });
+        }
+    </script>
+    <script type="module" src="./scripts/platforme.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./scripts/suggestions.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

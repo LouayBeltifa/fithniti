@@ -1,0 +1,481 @@
+/* ------------------------------------- PRESETS -------------------------------------  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ------------------------------------- END PRESETS -------------------------------------  */
+
+
+
+/* ------------------------------------- NAV BAR -------------------------------------  */
+.hero {
+    background-image: url(../images/hero1.jpg);
+    height: 100vh;
+    background-position: 0px -140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.hamtoggle button {
+    background: transparent;
+    border: 1px solid #006dd2;
+    padding: 5px 10px;
+    font-size: 25px;
+    color: #006dd2;
+    display: none;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+.show {
+    display: block;
+}
+
+.logo img {
+    width: 250px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #006dd2;
+    margin-right: 30px;
+    transition: all 0.4s ease;
+    font-size: 20px;
+}
+
+.nav-links a:hover{
+    border-bottom: 1px solid #006dd2;
+}
+
+.nav-links .btnride {
+    background-color: #006dd2;
+    color: white;
+    padding: 8px 10px 8px 10px;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    font-size: 18px;
+}
+
+.nav-links .btnride:hover {
+    border-bottom: none;
+    background-color: #003c74;
+}
+
+
+/* ------------------------------------- END NAV BAR -------------------------------------  */
+
+
+
+/* ------------------------------------- MAIN -------------------------------------  */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-top: 7%;
+  
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-text h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: #006dd2;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    margin-left: -1200px;
+}
+.main-text p {
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 25px;
+    margin-left: -1210px;
+    width: 450px;
+}
+
+.main-text .btnjoin {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #006dd2;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    margin-left: -1360px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.main-text .btnjoin:hover {
+    background-color: #003c74;
+}
+
+.main-sociallinks {
+    margin-top: 70px;
+    font-size: 30px;
+}
+
+.main-sociallinks a {
+    margin-left: 25px;
+    color: #006dd2;
+}
+
+.main-sociallinks a:hover {
+    color: #003c74;
+}
+
+
+/* ------------------------------------- END MAIN -------------------------------------  */
+
+
+
+/* ------------------------------------- About US Section -------------------------------------  */
+
+.aboutUS {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #006dd2;
+}
+
+.aboutUS h1 {
+    margin-top: 100px;
+    color: white;
+    margin-bottom: 70px;
+}
+
+.aboutUS p {
+    width: 800px;
+    text-align: center;
+    color: white;
+}
+
+.aboutUS .btnmore {
+    margin-top: 70px;
+}
+
+.aboutUS a {
+    margin-top: 40px;
+    color: white;
+    background-color: #006dd2;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+
+.aboutUS a:hover {
+    background-color: white;
+    color: #006dd2;
+}
+
+/* ------------------------------------- END About US Section -------------------------------------  */
+
+
+
+/* ------------------------------------- CONTACT US Section -------------------------------------  */
+
+.contactUS {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(../images/hero3.jpg);
+    background-size: cover;
+}
+
+.contactUS h1 {
+    color: #006dd2;
+    margin-top: 100px;
+}
+.formbox {
+    margin-top: 100px;
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactform input {
+    margin: 0px 0px 30px 0;
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #006dd2;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.contactform input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #006dd2;
+}
+
+.contactform textarea{
+    outline: none;
+    resize: none;
+    border: 1px solid #006dd2;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactform textarea::placeholder {
+    color: #006dd2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactform .btnsubmit {
+    margin-top: 40px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif ;
+    border-radius: 20px;
+    width: 100px;
+    outline: none;
+    background-color: white;
+    border: 1px solid #006dd2;
+    color: #006dd2;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.contactform .btnsubmit:hover {
+    background-color: #006dd2;
+    color: white;
+}
+
+
+/* ------------------------------------- END CONTACT US Section -------------------------------------  */
+
+
+
+/* ------------------------------------- FOOTER Section -------------------------------------  */
+
+footer {
+    background-color: #006dd2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .site-links h2 {
+    font-size: 17px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+footer .site-links .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -100px;
+}
+
+footer .site-links .links .links-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    text-align: center;
+}
+
+footer .site-links .links .links-box a {
+    color: rgb(218, 218, 218);
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+footer .site-links .links .links-box a:hover{
+    color: white;
+}
+
+footer .sponsors h2 {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 17px;
+}
+
+footer .foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .foot .social-links {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer .foot .social-links h2 {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 17px;
+
+}
+
+footer .foot .social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+}
+
+footer .foot .social-links a:hover {
+    color: rgb(218, 218, 218);
+}
+
+footer .foot p {
+    margin-bottom: 20px;
+}
+
+
+.show {
+    display: block;
+}
+
+.e {
+    display: none;
+}
+
+.exitshow {
+    display: flex;
+    
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1150px){
+    .hamiteams {
+        display: none;
+    }
+
+    .hamtoggle button {
+        display: block;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .show {
+        background-color: white;
+        position:fixed;
+        width:100%;
+        height:100%;
+        top:0px;
+        left:0px;
+        z-index:1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .show a {
+        margin: 25px 0;
+        font-size: 30px;
+    }
+
+    .nav-links .btnride {
+        font-size: 20px;
+
+    }
+
+    .hero {
+       background-image: url(../images/hero2.jpg);
+       background-color: white;
+    }
+
+    .main-text h1 {
+        margin-top: 100px;
+        font-size: 30px;
+        margin-left: -30px;
+    }
+    .main-text p {
+        font-size: 1px;
+    }
+
+    .main-text .btnjoin {
+        margin-left: -30px;    
+    }
+
+    .main-sociallinks {
+        margin-top: 80px;
+        text-align: center;
+        margin-left: -50px;
+        font-size: 25px;
+    }
+
+    .aboutUS h1 {
+        margin-top: 100px;
+    }
+    .aboutUS p {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        color: white;
+        margin-bottom: 100px;
+    }
+
+    .contactUS {
+        height: 1000px;
+    }
+
+    .formbox {
+        width: 300px;
+    }
+
+    .foot p {
+        font-size: 12px;
+    }
+
+}

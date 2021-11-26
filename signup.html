@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/signup.css">
+    <title>FITHNITI -  Signup</title>
+</head>
+<body>
+    <div class="main">
+        <div class="image">
+
+        </div>
+        <div class="signupbox">
+            <nav class="navbar">
+                <button class="signupBtn">Sign Up</button>
+                <button class="loginBtn">Sign In</button>
+            </nav>
+            <div class="formbox">
+                <form class="SignUpFrom show">
+                    <h3>Sign up Form</h3>
+                   
+                    <button id="signupgooglebtn"><ion-icon name="logo-google" style="margin-right:25px;"></ion-icon>Signup with google</button>
+                    <button id="signupfacebookbtn"><ion-icon name="logo-facebook" style="margin-right:15px;"></ion-icon>Signup with facebook</button>
+                    <hr style="border:1px solid black; width: 400px; margin-top: 20px;">
+                    <h3>Où Avec Votre Email : </h3>
+                    <form>
+                        <input type="email" placeholder="Votre Email" autocomplete="off" required>
+                        <input type="password" placeholder="Choisir Votre mot de passe" autocomplete="off" required>
+                        <input type="password" placeholder="Repeater le mot de passe" required>
+                        <button type="submit">Signup</button>
+                    </form>
+                </form>
+
+                
+                <from class="loginform unshow">
+                    <h3>Log in From</h3>
+                    <input type="email" placeholder="email" required autocomplete="off" id="logemail">
+                    <input type="password" placeholder="mot de passe" required autocomplete="off" id="logpassword">
+                    <button id="loginbtn">login</button> 
+                </from>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="module" src="./scripts/signup.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
